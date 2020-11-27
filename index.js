@@ -18,8 +18,43 @@ const run_command = async (options) => {
         }
         // console.log(`stdout: ${stdout}`);
         console.log("commad succeed");
+        return "";
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -45,19 +80,16 @@ const run = async() => {
 
     const context = github.context;
     
-    run_command(options).then(()=>{
-            fs.readFile('./report.md','utf8',(err,data)=>{
-                if (err) throw err;
-                if(data)
-                {
-                    console.log(data)
-                comment_report(context,github_token,issue_number,data);
-                }
-            });
-    }).catch((err)=>{
-        console.log(err);
-    });
+    await run_command(options);
 
+    fs.readFile('./report.md','utf8',(err,data)=>{
+        if (err) throw err;
+        if(data)
+        {
+            console.log(data)
+        comment_report(context,github_token,issue_number,data);
+        }
+    });
 }
 
 run();
