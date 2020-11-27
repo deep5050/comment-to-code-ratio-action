@@ -5,7 +5,6 @@ module.exports =
 /***/ 932:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-
 const core = __webpack_require__(186);
 const github = __webpack_require__(438);
 const { exec } = __webpack_require__(129);
@@ -23,12 +22,10 @@ const run_command = async (options) => {
             console.log(`stderr: ${stderr}`);
             return '';
         }
-        //console.log(`stdout: ${stdout}`);
-        const data = fs.readFileSync('./report.md');
-        console.log(data);
-        return data;
+        // console.log(`stdout: ${stdout}`);
     });
 }
+
 
 
 const comment_report = async (context, github_token, issue_number, message) => {
@@ -44,24 +41,17 @@ const comment_report = async (context, github_token, issue_number, message) => {
 }
 
 
-const run = () => {
+const run = async() => {
     const github_token = core.getInput('GITHUB_TOKEN', { required: true });
     const issue_number = core.getInput('issue_number', { required: true });
     const options = core.getInput('options', { required: true });
 
     const context = github.context;
-
-    run_command(options).then((data)=>{
-        if(data!=='')
-        {
-        comment_report(context,github,issue_number,data)
-        }
-        else{
-            console.log("ERR: empty data");
-        }
-    }).catch((err)=>{
-        console.log("error in running the tool");
-    })
+    
+    await run_command(options);
+    const data = readFileSync('./report.md');
+    console.log(data)
+    await comment_report(context,github_token,issue_number,data);
 }
 
 run();
