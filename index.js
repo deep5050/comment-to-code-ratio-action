@@ -2,6 +2,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { exec } = require("child_process");
+const fs = require('fs');
 
 
 const run_command = async (options) => {
@@ -19,6 +20,19 @@ const run_command = async (options) => {
     });
 }
 
+const get_report = async (filename) => {
+    fs.readFile(filename, (err, data) => {
+        if (err) {
+            console.log("ERR: " + err);
+            return '';
+        }
+        if (data) {
+            return data;
+        }
+    })
+
+}
+
 const comment_report = async (context, github_token, issue_number, message) => {
     const author = context.payload.sender.login;
 
@@ -31,6 +45,7 @@ const comment_report = async (context, github_token, issue_number, message) => {
     });
 }
 
+
 const run = () => {
     const github_token = core.getInput('GITHUB_TOKEN', { required: true });
     const issue_number = core.getInput('issue_number', { required: true });
@@ -39,7 +54,11 @@ const run = () => {
     const context = github.context;
 
     run_command(options).then((data) => {
-        comment_report(context, github_token, issue_number, "hi there :tada:");
+        get_report('report.md').then((data) => {
+            if (data !== '') {
+                comment_report(context, github_token, issue_number, data);
+            }
+        })
     }).catch((err) => {
         console.log(err);
     })
