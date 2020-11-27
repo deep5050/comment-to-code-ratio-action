@@ -14,14 +14,14 @@ const fs = __webpack_require__(747);
 const run_command = async (options) => {
     console.log("Running command");
     const command = `cloc ${options}`
-    exec(command, (error, stdout, stderr) => {
+    await exec(command, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
-            return '';
+            throw error;
         }
         if (stderr) {
             console.log(`stderr: ${stderr}`);
-            return '';
+            throw stderr;
         }
         // console.log(`stdout: ${stdout}`);
         console.log("commad succeed");
