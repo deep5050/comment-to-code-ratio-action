@@ -4,6 +4,7 @@ file|reason
 ./.gitignore|listed in $Not_Code_Extension{gitignore}
 ./LICENSE|language unknown (#3)
 ./dist/licenses.txt|listed in $Not_Code_Extension{txt}
+./ignored.txt|listed in $Not_Code_Extension{txt}
 ./node_modules/.bin/ncc|duplicate of ./node_modules/@vercel/ncc/dist/ncc/cli.js
 ./node_modules/@actions/core/lib/command.js.map|language unknown (#3)
 ./node_modules/@actions/core/lib/core.js.map|language unknown (#3)
@@ -91,6 +92,7 @@ file|reason
 ./.gitignore: listed in $Not_Code_Extension{gitignore}
 ./LICENSE: language unknown (#3)
 ./dist/licenses.txt: listed in $Not_Code_Extension{txt}
+./ignored.txt: listed in $Not_Code_Extension{txt}
 ./node_modules/.bin/ncc: duplicate of ./node_modules/@vercel/ncc/dist/ncc/cli.js
 ./node_modules/@actions/core/lib/command.js.map: language unknown (#3)
 ./node_modules/@actions/core/lib/core.js.map: language unknown (#3)
