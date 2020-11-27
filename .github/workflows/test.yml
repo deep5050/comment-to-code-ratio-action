@@ -8,6 +8,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+        
+      - name: install cloc
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: sudo npm install cloc -g
+        
       - name: comment to code ratio
         uses: ./
         with:
