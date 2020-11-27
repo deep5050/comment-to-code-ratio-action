@@ -53,7 +53,7 @@ const run = async() => {
     const context = github.context;
     
     run_command(options).then(()=>{
-            fs.readFile('./report.md',(err,data)=>{
+            fs.readFile('./report.md','utf8',(err,data)=>{
                 if (err) throw err;
                 if(data)
                 {
