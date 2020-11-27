@@ -13,7 +13,7 @@ const { exec } = __webpack_require__(129);
 
 const run_command = async (options) => {
     const command = `cloc ${options}`
-    exec("cloc --version", (error, stdout, stderr) => {
+    exec(command, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
@@ -39,14 +39,11 @@ const comment_report = async (context, github_token, issue_number, message) => {
 }
 
 const run = () => {
-    console.log("workflow started....");
-
     const github_token = core.getInput('GITHUB_TOKEN', { required: true });
     const issue_number = core.getInput('issue_number', { required: true });
     const options = core.getInput('options', { required: true });
 
     const context = github.context;
-    console.log(context);
 
     run_command(options).then((data) => {
         comment_report(context, github_token, issue_number, "hi there :tada:");
