@@ -6,7 +6,7 @@ const { exec } = require("child_process");
 
 const run_command = async (options) => {
     const command = `cloc ${options}`
-    exec(command, (error, stdout, stderr) => {
+    exec("cloc --version", (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
