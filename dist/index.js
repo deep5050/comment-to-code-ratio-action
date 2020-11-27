@@ -13,7 +13,7 @@ const Axios = __webpack_require__(6545);
 
 
 
-const comment_report = async (context, issue_number, message) => {
+const comment_report = async (context,github_token, issue_number, message) => {
     const author = context.payload.sender.login;
 
     const octokit = github.getOctokit(github_token);
@@ -35,7 +35,7 @@ const run = () => {
     const context = github.context;
     console.log(context);
 
-    comment_report(context, issue_number, "hi there :tada:");
+    comment_report(context, github_token,issue_number, "hi there :tada:");
 
 }
 
