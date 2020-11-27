@@ -46,8 +46,14 @@ const run = async() => {
     const context = github.context;
     
     run_command(options).then(()=>{
-            const data = fs.readFileSync('./report.md');
-            comment_report(context,github_token,issue_number,data);
+            fs.readFile('./report.md',(err,data)=>{
+                if (err) throw err;
+                if(data)
+                {
+                    console.log(data)
+                comment_report(context,github_token,issue_number,data);
+                }
+            });
     }).catch((err)=>{
         console.log(err);
     });
