@@ -5,6 +5,7 @@ const fs = require('fs');
 
 
 const run_command = async (options) => {
+    console.log("Running command");
     const command = `cloc ${options}`
     exec(command, (error, stdout, stderr) => {
         if (error) {
@@ -16,12 +17,14 @@ const run_command = async (options) => {
             return '';
         }
         // console.log(`stdout: ${stdout}`);
+        console.log("commad succeed");
     });
 }
 
 
 
 const comment_report = async (context, github_token, issue_number, message) => {
+    console.log("commenting");
     const author = context.payload.sender.login;
 
     const octokit = github.getOctokit(github_token);
@@ -31,6 +34,7 @@ const comment_report = async (context, github_token, issue_number, message) => {
         repo: context.payload.repository.name,
         body: message
     });
+    console.log("commented");
 }
 
 
