@@ -1,0 +1,16 @@
+name: "self test"
+on: [push]
+
+jobs:
+  test:
+    name: setup environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: comment to code ratio
+        uses: .
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issue_number: 1
+          options: 'cloc ./'
