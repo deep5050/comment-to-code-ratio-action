@@ -20,4 +20,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issue_number: 1
-          options: '--quiet ./ --hide-rate --git --unix'
+          options: '--quiet ./ --hide-rate --git --unix --ignored=ignored.txt --md --out=report.md --timeout=20 --by-percent=cmb '
