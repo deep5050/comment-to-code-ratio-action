@@ -49,7 +49,7 @@ const run = async() => {
     const context = github.context;
     
     await run_command(options);
-    const data = readFileSync('./report.md');
+    const data = fs.readFileSync('./report.md');
     console.log(data)
     await comment_report(context,github_token,issue_number,data);
 }
