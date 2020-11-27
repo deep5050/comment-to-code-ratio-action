@@ -1,0 +1,26 @@
+name: 'comment-to-code-ratio'
+description: 'Measure comment-to-code ratio for your entire project on every push'
+author: 'deep5050'
+inputs:
+  GITHUB_TOKEN:
+    description: 'Github Token for authentication'
+    required: true
+
+  issue_number:
+    description: '1' # enter a pinned issue number here
+    required: true
+
+  options:
+    description: 'command options for the cloc tool' # it is better that you always set it ,check readme
+    required: true
+
+
+outputs:
+  comment-url:
+    description: 'The comment URL'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  color: "red"
+  icon: "heart" 

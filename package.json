@@ -1,0 +1,35 @@
+{
+  "name": "comment-to-code-ratio-action",
+  "version": "1.0.0",
+  "description": "Measure comment-to-code ratio for your entire project on every push",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "ncc build index.js --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deep5050/comment-to-code-ratio-action.git"
+  },
+  "keywords": [
+    "cloc",
+    "comment",
+    "action",
+    "github-action",
+    "code-analysis",
+    "code-quality"
+  ],
+  "author": "Dipankar Pal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deep5050/comment-to-code-ratio-action/issues"
+  },
+  "homepage": "https://github.com/deep5050/comment-to-code-ratio-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@octokit/rest": "^18.0.9",
+    "@vercel/ncc": "^0.25.1",
+    "axios": "^0.21.0"
+  }
+}
