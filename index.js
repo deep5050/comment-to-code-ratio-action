@@ -45,10 +45,13 @@ const run = async() => {
 
     const context = github.context;
     
-    await run_command(options);
-    const data = fs.readFileSync('./report.md');
-    console.log(data)
-    await comment_report(context,github_token,issue_number,data);
+    run_command(options).then(()=>{
+            const data = fs.readFileSync('./report.md');
+            comment_report(context,github_token,issue_number,data);
+    }).catch((err)=>{
+        console.log(err);
+    });
+
 }
 
 run();
