@@ -17,28 +17,19 @@ const run_command = async (options) => {
     exec(command, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
-            return;
+            return '';
         }
         if (stderr) {
             console.log(`stderr: ${stderr}`);
-            return;
+            return '';
         }
-        console.log(`stdout: ${stdout}`);
+        //console.log(`stdout: ${stdout}`);
+        const data = fs.readFileSync('./report.md');
+        console.log(data);
+        return data;
     });
 }
 
-const get_report = async (filename) => {
-    fs.readFile(filename, (err, data) => {
-        if (err) {
-            console.log("ERR: " + err);
-            return '';
-        }
-        if (data) {
-            return data;
-        }
-    })
-
-}
 
 const comment_report = async (context, github_token, issue_number, message) => {
     const author = context.payload.sender.login;
@@ -60,14 +51,17 @@ const run = () => {
 
     const context = github.context;
 
-    run_command(options)
-        .then(() => {
-            const data = fs.readFileSync('./report.md');
-            comment_report(context, github_token, issue_number, data);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+    run_command(options).then((data)=>{
+        if(data!=='')
+        {
+        comment_report(context,github,issue_number,data)
+        }
+        else{
+            console.log("ERR: empty data");
+        }
+    }).catch((err)=>{
+        console.log("error in running the tool");
+    })
 }
 
 run();
