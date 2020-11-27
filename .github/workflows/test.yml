@@ -20,4 +20,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issue_number: 1
-          options: 'cloc ./'
+          options: '--quiet ./ --hide-rate --git --unix'
