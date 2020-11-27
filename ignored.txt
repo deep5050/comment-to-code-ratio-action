@@ -1,0 +1,176 @@
+file|reason
+:------|:------
+.|--exclude-dir=1
+./.gitignore|listed in $Not_Code_Extension{gitignore}
+./LICENSE|language unknown (#3)
+./dist/licenses.txt|listed in $Not_Code_Extension{txt}
+./node_modules/.bin/ncc|duplicate of ./node_modules/@vercel/ncc/dist/ncc/cli.js
+./node_modules/@actions/core/lib/command.js.map|language unknown (#3)
+./node_modules/@actions/core/lib/core.js.map|language unknown (#3)
+./node_modules/@actions/core/lib/file-command.js.map|language unknown (#3)
+./node_modules/@actions/core/lib/utils.js.map|language unknown (#3)
+./node_modules/@actions/github/lib/context.js.map|language unknown (#3)
+./node_modules/@actions/github/lib/github.js.map|language unknown (#3)
+./node_modules/@actions/github/lib/interfaces.js.map|language unknown (#3)
+./node_modules/@actions/github/lib/internal/utils.js.map|language unknown (#3)
+./node_modules/@actions/github/lib/utils.js.map|language unknown (#3)
+./node_modules/@actions/http-client/LICENSE|language unknown (#3)
+./node_modules/@octokit/auth-token/LICENSE|language unknown (#3)
+./node_modules/@octokit/auth-token/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/auth-token/dist-src/types.js|zero sized file
+./node_modules/@octokit/auth-token/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/core/LICENSE|duplicate of ./node_modules/@octokit/auth-token/LICENSE
+./node_modules/@octokit/core/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/core/dist-src/types.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/core/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/endpoint/LICENSE|language unknown (#3)
+./node_modules/@octokit/endpoint/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/endpoint/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/graphql/LICENSE|duplicate of ./node_modules/@octokit/endpoint/LICENSE
+./node_modules/@octokit/graphql/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/graphql/dist-src/types.js|zero sized file
+./node_modules/@octokit/graphql/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/plugin-paginate-rest/LICENSE|language unknown (#3)
+./node_modules/@octokit/plugin-paginate-rest/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/plugin-paginate-rest/dist-src/generated/paginating-endpoints.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-paginate-rest/dist-src/types.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-paginate-rest/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/plugin-request-log/LICENSE|language unknown (#3)
+./node_modules/@octokit/plugin-request-log/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/plugin-request-log/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/plugin-rest-endpoint-methods/LICENSE|duplicate of ./node_modules/@octokit/plugin-paginate-rest/LICENSE
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-src/generated/method-types.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-src/generated/parameters-and-response-types.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-src/types.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/request-error/LICENSE|duplicate of ./node_modules/@octokit/auth-token/LICENSE
+./node_modules/@octokit/request-error/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/request-error/dist-src/types.js|zero sized file
+./node_modules/@octokit/request-error/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/request/LICENSE|duplicate of ./node_modules/@octokit/endpoint/LICENSE
+./node_modules/@octokit/request/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/request/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/rest/LICENSE|language unknown (#3)
+./node_modules/@octokit/rest/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/rest/dist-web/index.js.map|language unknown (#3)
+./node_modules/@octokit/types/LICENSE|duplicate of ./node_modules/@octokit/plugin-paginate-rest/LICENSE
+./node_modules/@octokit/types/dist-node/index.js.map|language unknown (#3)
+./node_modules/@octokit/types/dist-src/AuthInterface.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/EndpointDefaults.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/EndpointInterface.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/EndpointOptions.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Fetch.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/GetResponseTypeFromEndpointMethod.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/OctokitResponse.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestError.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestHeaders.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestInterface.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestMethod.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestOptions.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestParameters.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestRequestOptions.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/ResponseHeaders.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Route.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Signal.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/StrategyInterface.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Url.js|duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/index.js|duplicate of ./node_modules/@octokit/types/dist-types/index.d.ts
+./node_modules/@octokit/types/dist-web/index.js.map|language unknown (#3)
+./node_modules/@types/node/LICENSE|language unknown (#3)
+./node_modules/@vercel/ncc/LICENSE|language unknown (#3)
+./node_modules/before-after-hook/LICENSE|language unknown (#3)
+./node_modules/deprecation/LICENSE|language unknown (#3)
+./node_modules/is-plain-object/LICENSE|language unknown (#3)
+./node_modules/once/LICENSE|language unknown (#3)
+./node_modules/tunnel/LICENSE|language unknown (#3)
+./node_modules/universal-user-agent/dist-node/index.js.map|language unknown (#3)
+./node_modules/universal-user-agent/dist-web/index.js.map|language unknown (#3)
+./node_modules/wrappy/LICENSE|duplicate of ./node_modules/once/LICENSE
+.: --exclude-dir=1
+./.gitignore: listed in $Not_Code_Extension{gitignore}
+./LICENSE: language unknown (#3)
+./dist/licenses.txt: listed in $Not_Code_Extension{txt}
+./node_modules/.bin/ncc: duplicate of ./node_modules/@vercel/ncc/dist/ncc/cli.js
+./node_modules/@actions/core/lib/command.js.map: language unknown (#3)
+./node_modules/@actions/core/lib/core.js.map: language unknown (#3)
+./node_modules/@actions/core/lib/file-command.js.map: language unknown (#3)
+./node_modules/@actions/core/lib/utils.js.map: language unknown (#3)
+./node_modules/@actions/github/lib/context.js.map: language unknown (#3)
+./node_modules/@actions/github/lib/github.js.map: language unknown (#3)
+./node_modules/@actions/github/lib/interfaces.js.map: language unknown (#3)
+./node_modules/@actions/github/lib/internal/utils.js.map: language unknown (#3)
+./node_modules/@actions/github/lib/utils.js.map: language unknown (#3)
+./node_modules/@actions/http-client/LICENSE: language unknown (#3)
+./node_modules/@octokit/auth-token/LICENSE: language unknown (#3)
+./node_modules/@octokit/auth-token/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/auth-token/dist-src/types.js: zero sized file
+./node_modules/@octokit/auth-token/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/core/LICENSE: duplicate of ./node_modules/@octokit/auth-token/LICENSE
+./node_modules/@octokit/core/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/core/dist-src/types.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/core/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/endpoint/LICENSE: language unknown (#3)
+./node_modules/@octokit/endpoint/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/endpoint/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/graphql/LICENSE: duplicate of ./node_modules/@octokit/endpoint/LICENSE
+./node_modules/@octokit/graphql/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/graphql/dist-src/types.js: zero sized file
+./node_modules/@octokit/graphql/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/plugin-paginate-rest/LICENSE: language unknown (#3)
+./node_modules/@octokit/plugin-paginate-rest/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/plugin-paginate-rest/dist-src/generated/paginating-endpoints.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-paginate-rest/dist-src/types.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-paginate-rest/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/plugin-request-log/LICENSE: language unknown (#3)
+./node_modules/@octokit/plugin-request-log/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/plugin-request-log/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/plugin-rest-endpoint-methods/LICENSE: duplicate of ./node_modules/@octokit/plugin-paginate-rest/LICENSE
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-src/generated/method-types.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-src/generated/parameters-and-response-types.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-src/types.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/plugin-rest-endpoint-methods/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/request-error/LICENSE: duplicate of ./node_modules/@octokit/auth-token/LICENSE
+./node_modules/@octokit/request-error/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/request-error/dist-src/types.js: zero sized file
+./node_modules/@octokit/request-error/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/request/LICENSE: duplicate of ./node_modules/@octokit/endpoint/LICENSE
+./node_modules/@octokit/request/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/request/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/rest/LICENSE: language unknown (#3)
+./node_modules/@octokit/rest/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/rest/dist-web/index.js.map: language unknown (#3)
+./node_modules/@octokit/types/LICENSE: duplicate of ./node_modules/@octokit/plugin-paginate-rest/LICENSE
+./node_modules/@octokit/types/dist-node/index.js.map: language unknown (#3)
+./node_modules/@octokit/types/dist-src/AuthInterface.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/EndpointDefaults.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/EndpointInterface.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/EndpointOptions.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Fetch.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/GetResponseTypeFromEndpointMethod.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/OctokitResponse.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestError.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestHeaders.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestInterface.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestMethod.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestOptions.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestParameters.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/RequestRequestOptions.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/ResponseHeaders.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Route.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Signal.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/StrategyInterface.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/Url.js: duplicate of ./node_modules/@octokit/types/dist-src/generated/Endpoints.js
+./node_modules/@octokit/types/dist-src/index.js: duplicate of ./node_modules/@octokit/types/dist-types/index.d.ts
+./node_modules/@octokit/types/dist-web/index.js.map: language unknown (#3)
+./node_modules/@types/node/LICENSE: language unknown (#3)
+./node_modules/@vercel/ncc/LICENSE: language unknown (#3)
+./node_modules/before-after-hook/LICENSE: language unknown (#3)
+./node_modules/deprecation/LICENSE: language unknown (#3)
+./node_modules/is-plain-object/LICENSE: language unknown (#3)
+./node_modules/once/LICENSE: language unknown (#3)
+./node_modules/tunnel/LICENSE: language unknown (#3)
+./node_modules/universal-user-agent/dist-node/index.js.map: language unknown (#3)
+./node_modules/universal-user-agent/dist-web/index.js.map: language unknown (#3)
+./node_modules/wrappy/LICENSE: duplicate of ./node_modules/once/LICENSE

@@ -53,17 +53,14 @@ const run = () => {
 
     const context = github.context;
 
-    run_command(options).then((data) => {
-        get_report('report.md').then((data) => {
-            if (data !== '') {
-                comment_report(context, github_token, issue_number, data);
-            }
+    run_command(options)
+        .then(() => {
+            const data = fs.readFileSync('./report.md');
+            comment_report(context, github_token, issue_number, data);
         })
-    }).catch((err) => {
-        console.log(err);
-    })
-
-
+        .catch((err) => {
+            console.log(err);
+        })
 }
 
 run();
