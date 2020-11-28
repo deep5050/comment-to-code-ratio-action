@@ -68,7 +68,7 @@ const run = async () => {
 
  Use [this action](https://github.com/deep5050/comment-to-code-ratio-action) on your projects to generate a report like this.`;
 
-    var modified_data = `### comment-to-code-ratio analysis report for the last push 
+    var modified_data = `#### comment-to-code-ratio analysis report for the last push :tada:
         
  ${report_text}
 

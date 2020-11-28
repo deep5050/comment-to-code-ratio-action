@@ -15,12 +15,9 @@ inputs:
     required: true
 
 
-outputs:
-  comment-url:
-    description: 'The comment URL'
 runs:
   using: 'node12'
   main: 'dist/index.js'
 branding:
-  color: "red"
-  icon: "heart" 
+  color: "green"
+  icon: "activity" 

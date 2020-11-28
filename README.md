@@ -1,9 +1,87 @@
-# comment-to-code-ratio-action
-GitHub action to measure comment-code ratio for your entire project (WIP)
+
+<div align=center>
+<p align=center>
+
+<h4 align=center> COMMENT TO CODE RATIO ACTION</h4>
+<p align=center>GitHub Action To Measure Comment-Code Ratio For Your Entire Project On Every Push</p>
+</h4>
+
+</p>
+<p align=center>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/issues"><img alt="Github Issues" src="https://img.shields.io/github/issues-raw/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/pulls"><img alt="Github open PRs" src="https://img.shields.io/github/issues-pr-raw/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/releases"><img alt="Release Version" src="https://img.shields.io/github/v/release/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/actions?query=workflow:self test"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/deep5050/comment-to-code-ratio-action/self test?label=self test&logo=github&style=for-the-badge"/></a>
+
+</p>
 
 
+</div>
 
-## options
+## Example
+
+Language|files|blank %|comment %|code
+:-------|-------:|-------:|-------:|-------:
+TypeScript|188|4.15|25.66|84558
+JavaScript|121|9.73|16.44|17484
+Markdown|35|20.87|0.00|4417
+JSON|26|0.00|0.00|2474
+XML|5|0.00|0.00|829
+YAML|3|12.73|0.00|48
+--------|--------|--------|--------|--------
+SUM:|378|5.54|22.73|109810
+
+OR
+
+File|blank %|comment %|code
+:-------|-------:|-------:|-------:
+./index.js|26.67|0.00|33
+./temp.js|26.92|0.00|19
+./help.js|23.81|0.00|16
+./report.md|9.09|0.00|10
+--------|--------|--------|--------
+SUM:|24.27|0.00|78
+
+## How to install
+
+```yaml
+name: "c2c"
+on: [push]
+
+jobs:
+  test:
+    name: setup environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        
+      - name: install cloc
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: sudo npm install cloc -g
+        
+      - name: comment to code ratio
+        uses: deep5050/comment-to-code-ratio-action@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          issue_number: 1
+          options: '--quiet ./ --hide-rate --git --unix --md --out=report.md --timeout=20 --by-percent=cmb --by-file --exclude-dir=node_mudules --exclude-lang=JSON,XML'
+
+```
+
+> You might wanna change the options as per your needs.
+
+
+## Options
+
+This action uses the [cloc](https://github.com/AlDanial/cloc) tool to generate the report. Here is the usgae guide
+for the tool for a quick reference.
+
 
 ```text
 
@@ -459,3 +537,40 @@ Usage: cloc [options] <file(s)/dir(s)/git hash(es)> | <set 1> <set 2> | <report 
    --yaml                    Write the results in YAML.
 
    ```
+
+
+   ## Support
+
+All Kinds Of Supports Are Welcome :raised_hands:! The Most Basic Way To Show Your Support Is To Star :star2: The Project, Or To Raise Issues :speech_balloon: You Can Also Support This Project By [**becoming a sponsor on GitHub**](https://github.com/sponsors/deep5050) :clap: Or By Making A [**Paypal**](https://paypal.me/deep5050) Donation :)
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Dipankar Pal - dipankarpal5050@gmail.com
+
+
+
+## Related Works
+[NaughtyLust](https://github.com/deep5050/NaughtyLust) : Awesome Nautilus Scripts For Linux.
+
+[qikQR](https://github.com/deep5050/qikQR) : Minimal QR Code Generator App Made With Electron.
+
+[cppcheck-action](https://github.com/deep5050/cppcheck-action) : Check Security Flaws In Your C/C++ Codes Right From GitHub Action Workflows.
+
+[autopy-lot](https://github.com/deep5050/autopy-lot) : GitHub Action Setup To Convert Jupyter Notebooks To Python Scripts And Markdowns.
+
+<div align=center>
+<p align=center><img align=center src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="unicorn" width="400">
+</p>
+<p align=center>Happy Coding</p>
+  
+<p align=center><img align=center  src="https://visitor-badge.laobi.icu/badge?page_id=deep5050.comment-to-code-ratio-action" alt="Visitors">  </p>
+
+</div>

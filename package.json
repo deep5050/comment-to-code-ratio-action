@@ -1,6 +1,6 @@
 {
   "name": "comment-to-code-ratio-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Measure comment-to-code ratio for your entire project on every push",
   "main": "dist/index.js",
   "scripts": {
