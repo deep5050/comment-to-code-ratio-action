@@ -4,16 +4,17 @@ const exace = require('execa');
 const fs = require('fs');
 
 
-const run_command = (options) => {
-    console.log("Running command");
+function run_command(options) {
+    const options_array = options.split(' ');
     try {
-        var options_array = options.split(' ');
         execa.sync('cloc', options_array);
-        execa
+        console.log(`command run`);
     } catch (error) {
-        throw new Error(`Faild to execute the command: ${{ error }}`);
+        throw new Error(`Failed to execute error: ${{ error }}`);
+
     }
 }
+
 
 
 const comment_report = async (context, github_token, issue_number, message) => {
@@ -37,13 +38,18 @@ const run = async () => {
     const options = core.getInput('options', { required: true });
     const context = github.context;
 
+    run_command(options);
+    var report_text = "";
+
     try {
-        run_command(options);
-        const report_text = fs.readFileSync('report.md', 'utf-8');
-        await comment_report(context, github_token, issue_number, report_text);
+        report_text = fs.readFileSync('report.md', 'utf-8');
     } catch (error) {
-        throw new Error(`Failed to read the file: ${{ error }}`)
+        throw new Error(`Failed to read the report: ${{ error }}`);
     }
+
+    await comment_report(context, github_token, issue_number, report_text);
+
+
 
 }
 
