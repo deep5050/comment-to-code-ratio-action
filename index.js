@@ -44,10 +44,38 @@ const run = async () => {
     try {
         report_text = fs.readFileSync('report.md', 'utf-8');
     } catch (error) {
-        throw new Error(`Failed to read the report: ${{ error }}`);
+        throw new Error(`Failed to read the report: ${error}`);
     }
 
-    await comment_report(context, github_token, issue_number, report_text);
+
+    var lines = report_text.split('\n');
+    lines.splice(0, 3);
+    report_text = lines.join('\n');
+
+    const fixed_footer = `
+ Horribly commented code averages 0-5% comment ratio.
+ Poorly commented code has a 5-10% comment ratio.
+ Average code has a 10-15% comment ratio.
+ Good code has a 15-25% comment ratio.
+ Excellent code has a > 25% comment ratio.
+
+ Use [this action](https://github.com/deep5050/comment-to-code-ratio-action) on your projects to generate a report like this.`;
+
+    var modified_data = `### comment-to-code-ratio analysis report for the last push 
+        
+ ${report_text}
+
+ ${fixed_footer}`;
+
+
+    try {
+        fs.writeFileSync('report.md', modified_data)
+    } catch (error) {
+        throw new Error(`Failed to write report: ${error}`)
+
+    }
+
+    await comment_report(context, github_token, issue_number, modified_data);
 
 
 
