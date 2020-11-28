@@ -30,12 +30,14 @@ Every comment is a hint that you may need to refactor to make the code's intent 
 So I implement this action which mesaures the comment to code ratio for your entire project and comment on a fixed issue on every push to the codebase :smile: .
 Optionally you can save the report to your repo.
 
-## Usage gude
+## Usage guide
 1. Open an blank issue ( you might wanna pin this too )
 2. Put the issue number in the workflow file
 3. Configure the options under the workflow file ( if needed )
 
-## Example
+## [see demo](https://github.com/deep5050/comment-to-code-ratio-action/issues/1)
+
+![demo](./demo.png)
 
 Language|files|blank %|comment %|code
 :-------|-------:|-------:|-------:|-------:
