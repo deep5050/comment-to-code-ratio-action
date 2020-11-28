@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const exace = require('execa');
+const execa = require('execa');
 const fs = require('fs');
 
 

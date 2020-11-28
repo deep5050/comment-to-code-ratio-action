@@ -7,7 +7,7 @@ module.exports =
 
 const core = __webpack_require__(2186);
 const github = __webpack_require__(5438);
-const exace = __webpack_require__(5447);
+const execa = __webpack_require__(5447);
 const fs = __webpack_require__(5747);
 
 
