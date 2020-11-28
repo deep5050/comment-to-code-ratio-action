@@ -1,8 +1,7 @@
 
 <div align=center>
 <p align=center>
-
-<h4 align=center> COMMENT TO CODE RATIO ACTION</h4>
+<img align=center src="./logo.svg">
 <p align=center>GitHub Action To Measure Comment-Code Ratio For Your Entire Project On Every Push</p>
 </h4>
 
