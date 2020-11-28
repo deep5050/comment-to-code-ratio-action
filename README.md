@@ -34,7 +34,7 @@ Optionally you can save the report to your repo.
 2. Put the issue number in the workflow file
 3. Configure the options under the workflow file ( if needed )
 
-## [see demo](https://github.com/deep5050/comment-to-code-ratio-action/issues/1)
+## [See demo](https://github.com/deep5050/comment-to-code-ratio-action/issues/1)
 
 ![demo](./demo.png)
 
