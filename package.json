@@ -29,6 +29,7 @@
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
     "@octokit/rest": "^18.0.9",
-    "@vercel/ncc": "^0.25.1"
+    "@vercel/ncc": "^0.25.1",
+    "execa": "^4.1.0"
   }
 }
