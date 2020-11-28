@@ -1,4 +1,4 @@
-name: "self test"
+name: "test"
 on: [push]
 
 jobs:
