@@ -14,12 +14,26 @@
 <a href="https://github.com/deep5050/comment-to-code-ratio-action/issues"><img alt="Github Issues" src="https://img.shields.io/github/issues-raw/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
 <a href="https://github.com/deep5050/comment-to-code-ratio-action/pulls"><img alt="Github open PRs" src="https://img.shields.io/github/issues-pr-raw/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
 <a href="https://github.com/deep5050/comment-to-code-ratio-action/releases"><img alt="Release Version" src="https://img.shields.io/github/v/release/deep5050/comment-to-code-ratio-action?style=for-the-badge"/></a>
-<a href="https://github.com/deep5050/comment-to-code-ratio-action/actions?query=workflow:self test"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/deep5050/comment-to-code-ratio-action/self test?label=self test&logo=github&style=for-the-badge"/></a>
+<a href="https://github.com/deep5050/comment-to-code-ratio-action/actions?query=workflow:test"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/deep5050/comment-to-code-ratio-action/test?label=test&logo=github&style=for-the-badge"/></a>
 
 </p>
 
 
 </div>
+
+## About
+Comments should be very rare and valuable, almost always expressing the "why" and never the "how" (the exception being when the how is complex and not easily discernible from the code).
+
+Every comment is a hint that you may need to refactor to make the code's intent clearer. Every comment risks becoming out of date as soon as it's written.
+
+
+So I implement this action which mesaures the comment to code ratio for your entire project and comment on a fixed issue on every push to the codebase :smile: .
+Optionally you can save the report to your repo.
+
+## Usage gude
+1. Open an blank issue ( you might wanna pin this too )
+2. Put the issue number in the workflow file
+3. Configure the options under the workflow file ( if needed )
 
 ## Example
 
