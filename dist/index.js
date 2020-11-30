@@ -62,15 +62,11 @@ const run = async () => {
     const fixed_footer = `
  Horribly commented code averages 0-5% comment ratio.
 
-
  Poorly commented code has a 5-10% comment ratio.
-
 
  Average code has a 10-15% comment ratio.
 
-
  Good code has a 15-25% comment ratio.
-
 
  Excellent code has a > 25% comment ratio.
 
