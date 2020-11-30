@@ -54,15 +54,10 @@ const run = async () => {
 
     const fixed_footer = `
  Horribly commented code averages 0-5% comment ratio.
-
  Poorly commented code has a 5-10% comment ratio.
-
  Average code has a 10-15% comment ratio.
-
  Good code has a 15-25% comment ratio.
-
  Excellent code has a > 25% comment ratio.
-
 
  Use [this action](https://github.com/deep5050/comment-to-code-ratio-action) on your projects to generate a report like this.`;
 
@@ -73,7 +68,7 @@ const run = async () => {
  ${fixed_footer}`;
 
     try {
-        fs.writeFileSync('report.md', modified_data)
+        fs.writeFileSync('report.md', modified_data,'utf-8')
     } catch (error) {
         core.setFailed(`Error in writing the file: ${error.message}`);
     }
