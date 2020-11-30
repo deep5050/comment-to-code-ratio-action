@@ -16,9 +16,13 @@ SUM:|15.50|9.88|7087
 
  
  Horribly commented code averages 0-5% comment ratio.
+ 
  Poorly commented code has a 5-10% comment ratio.
+ 
  Average code has a 10-15% comment ratio.
+ 
  Good code has a 15-25% comment ratio.
+ 
  Excellent code has a > 25% comment ratio.
 
  Use [this action](https://github.com/deep5050/comment-to-code-ratio-action) on your projects to generate a report like this.
