@@ -30,13 +30,19 @@ So I implement this action which mesaures the comment to code ratio for your ent
 Optionally you can save the report to your repo.
 
 ## Usage guide
-1. Open an blank issue ( you might wanna pin this too )
+1. Open an blank issue ( you might wanna pin acnd close this too )
 2. Put the issue number in the workflow file
 3. Configure the options under the workflow file ( if needed )
+
+
 
 ## [See demo](https://github.com/deep5050/comment-to-code-ratio-action/issues/1)
 
 ![demo](./demo.png)
+
+
+## Some report structures
+
 
 Language|files|blank %|comment %|code
 :-------|-------:|-------:|-------:|-------:
@@ -91,6 +97,18 @@ jobs:
 
 > You might wanna change the options as per your needs.
 
+### Tips
+
+To save the report file locally, add the below code snippet add the end of the workflow file
+
+```yaml
+      - name: publish report
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'main' # your branch name goes here
+
+```
 
 ## Options
 

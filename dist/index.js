@@ -17,8 +17,7 @@ function run_command(options) {
         execa.sync('cloc', options_array);
         console.log(`command run`);
     } catch (error) {
-        throw new Error(`Failed to execute error: ${{ error }}`);
-
+        core.setFailed(`Error in running the command: ${error.message}`);
     }
 }
 
@@ -35,7 +34,8 @@ const comment_report = async (context, github_token, issue_number, message) => {
         repo: context.payload.repository.name,
         body: message
     });
-    console.log("commented");
+
+    core.debug(`Sucessfully commented on the target issue`);
 }
 
 
@@ -51,7 +51,7 @@ const run = async () => {
     try {
         report_text = fs.readFileSync('report.md', 'utf-8');
     } catch (error) {
-        throw new Error(`Failed to read the report: ${error}`);
+        core.setFailed(`Error in reading the file: ${error.message}`);
     }
 
 
@@ -61,10 +61,19 @@ const run = async () => {
 
     const fixed_footer = `
  Horribly commented code averages 0-5% comment ratio.
+
+
  Poorly commented code has a 5-10% comment ratio.
+
+
  Average code has a 10-15% comment ratio.
+
+
  Good code has a 15-25% comment ratio.
+
+
  Excellent code has a > 25% comment ratio.
+
 
  Use [this action](https://github.com/deep5050/comment-to-code-ratio-action) on your projects to generate a report like this.`;
 
@@ -74,18 +83,13 @@ const run = async () => {
 
  ${fixed_footer}`;
 
-
     try {
         fs.writeFileSync('report.md', modified_data)
     } catch (error) {
-        throw new Error(`Failed to write report: ${error}`)
-
+        core.setFailed(`Error in writing the file: ${error.message}`);
     }
 
     await comment_report(context, github_token, issue_number, modified_data);
-
-
-
 }
 
 run();
