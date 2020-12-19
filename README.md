@@ -30,7 +30,7 @@ So I implement this action which mesaures the comment to code ratio for your ent
 Optionally you can save the report to your repo.
 
 ## Usage guide
-1. Open an blank issue ( you might wanna pin acnd close this too )
+1. Open a blank issue ( you might wanna pin acnd close this too )
 2. Put the issue number in the workflow file
 3. Configure the options under the workflow file ( if needed )
 
